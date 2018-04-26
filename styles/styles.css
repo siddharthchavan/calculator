@@ -1,0 +1,10 @@
+* {
+  font-family: Helvetica, sans-serif;
+  color: rgb(62, 62, 62);
+}
+
+.answer {
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgb(181, 181, 181);
+}
