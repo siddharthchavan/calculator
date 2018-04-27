@@ -1,20 +1,24 @@
 
-var solution = false;
-var arg1 = parseInt(prompt("first argument"));
-var arg2 = parseInt(prompt("second argument"));
-var calcFunction = prompt("calculator function: addition, subtraction, multiplication, division".toLowerCase());
+var solution = 0;
+var arg1 = prompt("first argument");
+var arg2 = prompt("second argument");
+var calcFunction = prompt("calculator function: add, subtract, multiply, divide");
 
 function calculate () {
-  if (calcFunction !== "addition" || "subtraction" || "multiplication" || "division") {
+  if (calcFunction != "add" || calcFunction != "subtract" || calcFunction != "multiply" || calcFunction != "divide") {
     document.write("You didn't choose a function!");
-  } else if (calcFunction == "addition") {
-    solution = arg1 + arg2;
-  } else if (calcFunction == "subtraction") {
-    solution = arg1 - arg2;
-  } else if (calcFunction == "multiplication") {
-    solution = arg1 * arg2;
-  } else if (calcFunction == "division") {
-    solution = arg1 / arg2;
+  } else if (calcFunction == "add" || calcFunction == "subtract" || calcFunction == "multiply" || calcFunction == "divide") {
+    if (calcFunction == "add") {
+        solution = parseInt(arg1) + parseInt(arg2);
+    } else if (calcFunction == "subtract") {
+        solution = parseInt(arg1) - parseInt(arg2);
+    } else if (calcFunction == "multiply") {
+        solution = parseInt(arg1) * parseInt(arg2);
+    } else if (calcFunction == "divide") {
+        solution = parseInt(arg1) / parseInt(arg2);
+    }
+    document.write(solution);
   }
-  document.write(solution);
 }
+
+calculate()
